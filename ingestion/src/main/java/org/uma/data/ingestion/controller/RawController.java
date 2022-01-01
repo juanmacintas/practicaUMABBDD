@@ -34,4 +34,9 @@ public class RawController {
     public List<CleanDto> clean() {
         return cleanService.clean();
     }
+
+    @GetMapping("/getAllClean")
+    public List<CleanDto> getAllClean() {
+        return cleanService.getAll();
+    }
 }
