@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.uma.data.ingestion.dto.CleanDto;
 import org.uma.data.ingestion.dto.RawDto;
 import org.uma.data.ingestion.service.CleanService;
 import org.uma.data.ingestion.service.RawService;
@@ -30,7 +31,7 @@ public class RawController {
     }
 
     @PostMapping("/clean")
-    public List<RawDto> clean() {
+    public List<CleanDto> clean() {
         return cleanService.clean();
     }
 }
