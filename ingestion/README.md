@@ -46,7 +46,7 @@ Simple ingestion project
 
     > http://localhost:8080/clean
 
-    3. /getAllClean: retrieve all cleaned data
+    4. /getAllClean: retrieve all cleaned data
 
     >
     > [
