@@ -13,7 +13,7 @@ Simple ingestion project
 
 > mvn spring-boot:run
 
-3. Check the service, two endpoints are available:
+3. Check the service, four endpoints are available:
 
     1. /insert: you can insert a raw element as below:
 
@@ -25,6 +25,7 @@ Simple ingestion project
     
     > http://localhost:8080/findAll
     >
+    > [
     >     {
     >         "id": 1,
     >         "datasetId": 1,
@@ -39,3 +40,28 @@ Simple ingestion project
     >         "userName": "jsmith",
     >         "defaultCategory": "Travel"
     >     }
+    > ]
+
+    3. /clean: clean the raw data:
+
+    > http://localhost:8080/clean
+
+    3. /getAllClean: retrieve all cleaned data
+
+    >
+    > [
+    >     {
+    >         "id": 1,
+    >         "datasetId": 1,
+    >         "client": "acme",
+    >         "vendor": "air america",
+    >         "invoiceCode": "AA343234321",
+    >         "description": "DALAS - MIAMI Flight",
+    >         "fiscalYear": "2021",
+    >         "currency": "dollar",
+    >         "spend": 121.45,
+    >         "timestamp": "1970-01-01T05:36:50.612+00:00",
+    >         "userName": "jsmith",
+    >         "defaultCategory": "Travel"
+    >     }
+    > ]
