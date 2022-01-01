@@ -8,20 +8,29 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.uma.data.ingestion.dto.RawDto;
+import org.uma.data.ingestion.service.CleanService;
 import org.uma.data.ingestion.service.RawService;
 
 @RestController("/raw")
 public class RawController {
     @Autowired
-    RawService service;
+    RawService rawService;
+
+    @Autowired
+    CleanService cleanService;
 
     @PostMapping("/insert")
     public void insert(@RequestBody RawDto raw) {
-        service.insert(raw);
+        rawService.insert(raw);
     }
 
     @GetMapping("/getAll")
     public List<RawDto> getAll() {
-        return service.getAll();
+        return rawService.getAll();
+    }
+
+    @PostMapping("/clean")
+    public List<RawDto> clean() {
+        return cleanService.clean();
     }
 }

@@ -21,7 +21,7 @@ public class CleanService {
     @Value("${org.uma.data.clean}")
     Integer cleanPercentaje;
     
-    List<RawDto> clean() {
+    public List<RawDto> clean() {
 
         // retrieve all raw data
         List<Raw> rawdata = repository.findAll();
