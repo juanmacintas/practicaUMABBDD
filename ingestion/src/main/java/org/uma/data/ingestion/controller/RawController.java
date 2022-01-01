@@ -15,9 +15,6 @@ public class RawController {
     @Autowired
     RawService service;
 
-    /*
-        {"datasetId":1, "client": "acme", "vendor": "air america", "invoiceCode": "AA343234321", "description": "DALAS - MIAMI Flight", "fiscalYear": "2021", "currency": "dollar", "spend": 121.45, "userName": "jsmith", "defaultCategory": "Travel", "timestamp": "20210612"}
-    */
     @PostMapping("/insert")
     public void insert(@RequestBody RawDto raw) {
         service.insert(raw);

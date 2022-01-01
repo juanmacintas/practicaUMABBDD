@@ -29,12 +29,10 @@ public class RawService {
     public List<RawDto> getAll() {
 
         DozerBeanMapper mapper = new DozerBeanMapper();
-        Iterator<Raw> raws = repository.findAll().iterator();
+        List<Raw> raws = repository.findAll();
         List<RawDto> out = new ArrayList<RawDto>();
 
-        while(raws.hasNext()) {
-            out.add(mapper.map(raws.next(), RawDto.class));
-        }
+        raws.forEach(r -> out.add(mapper.map(r, RawDto.class)));
 
         return out;
     }
