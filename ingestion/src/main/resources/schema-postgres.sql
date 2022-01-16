@@ -53,6 +53,19 @@
         primary key (id)
     );
 
+    create table event_history (
+       id int4 not null,
+        cycle_id int4,
+        dataset_id int4,
+        end_date date,
+        last_modified date,
+        start_date date,
+        status varchar(255),
+        user_id int4,
+        event_id int4 not null,
+        primary key (id)
+    );
+
     create table label (
        id int4 not null,
         category_id int4,
@@ -103,6 +116,16 @@
         rol_id int4 not null,
         primary key (id)
     );
+
+    alter table event_history
+       add constraint FKlef0qi8d85ucr0ed19r8jk8oo
+       foreign key (event_id)
+       references event;
+
+    alter table event_history
+       add constraint FKa201cu0xeo9hkp7akwhu891dp
+       foreign key (user_id)
+       references users;
 
     alter table users
        add constraint FKho3mbu2bnehxlpdmolc9f3h0m

@@ -1,14 +1,12 @@
 package org.uma.data.ingestion.entity;
 
-import java.util.List;
+import java.sql.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,26 +18,27 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Users {
+public class EventHistory {
 
 	@Id
 	private Integer id;
 
-	private String userName;
+	private Integer datasetId;
 
-	private String userSurname;
-
-	private String userStatus;
+	private Integer cycleId;
 
 	@ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private Rol rol;
+	private Event event;
 
 	@ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private Permission permission;
+	private Users user;
 
-	private String client;
+	private Date startDate;
 
-	@OneToMany(mappedBy="event")
-	private List<EventHistory> history;
+	private Date lastModified;
+
+	private Date endDate;
+
+	private String status;
 
 }
