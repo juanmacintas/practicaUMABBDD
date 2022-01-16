@@ -26,7 +26,7 @@ public class CleanService {
 
     @Value("${org.uma.data.clean}")
     Integer cleanPercentaje;
-    
+
     public List<CleanDto> clean() {
 
         // retrieve all raw data
@@ -36,7 +36,7 @@ public class CleanService {
         Integer rowsToRemove = rawdata.size()/cleanPercentaje;
 
         // create random seed
-        Random rand = new Random(); 
+        Random rand = new Random();
 
         // remove rows to clean
         for (int i = 0; i < rowsToRemove; i++) {

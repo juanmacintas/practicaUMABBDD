@@ -1,6 +1,8 @@
 package org.uma.data.ingestion.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -26,13 +28,11 @@ public class Users {
 
 	private String userStatus;
 
-	@ManyToOne
-	@JoinColumn(name = "id", insertable = false, updatable = false)
-	private Rol rolId;
+	@ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private Rol rol;
 
-	@ManyToOne()
-	@JoinColumn(name = "id",insertable = false, updatable = false)
-	private Permission permissionId;
+	@ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private Permission permission;
 
 	private String client;
 
