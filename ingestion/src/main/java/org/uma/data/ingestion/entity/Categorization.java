@@ -1,7 +1,5 @@
 package org.uma.data.ingestion.entity;
 
-import java.sql.Date;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -18,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class EventHistory {
+public class Categorization {
 
 	@Id
 	private Integer id;
@@ -28,18 +26,19 @@ public class EventHistory {
 	@ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Cycle cycle;
 
-	@ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private Event event;
+	private Integer cleanId;
+
+	private Integer ownerId;
+
+	private Integer priority;
+
+	private Integer defaultCategoryId;
+
 
 	@ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private Users user;
+	private Category category;
 
-	private Date startDate;
-
-	private Date lastModified;
-
-	private Date endDate;
-
-	private String status;
-
+	private Double spend;
+	private String vendor;
+	private Double threshold;
 }

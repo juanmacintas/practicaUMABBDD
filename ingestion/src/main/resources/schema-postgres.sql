@@ -13,6 +13,20 @@
 
     create sequence hibernate_sequence start 1 increment 1;
 
+    create table categorization (
+       id int4 not null,
+        clean_id int4,
+        dataset_id int4,
+        default_category_id int4,
+        owner_id int4,
+        priority int4,
+        spend float8,
+        threshold float8,
+        vendor varchar(255),
+        category_id int4 not null,
+        cycle_id int4 not null,
+        primary key (id)
+    );
 
     create table category (
        id int4 not null,
@@ -55,14 +69,14 @@
 
     create table event_history (
        id int4 not null,
-        cycle_id int4,
         dataset_id int4,
         end_date date,
         last_modified date,
         start_date date,
         status varchar(255),
-        user_id int4,
+		cycle_id int4 not null,
         event_id int4 not null,
+        user_id int4 not null,
         primary key (id)
     );
 
@@ -116,6 +130,23 @@
         rol_id int4 not null,
         primary key (id)
     );
+
+
+    alter table categorization
+       add constraint FKg2g4lidpe3jrle0a3hamhuomp
+       foreign key (category_id)
+       references category;
+
+
+    alter table categorization
+       add constraint FK9t6q7suphbafsg5294h8vxtti
+       foreign key (cycle_id)
+       references cycle;
+
+    alter table event_history
+       add constraint FKlxowxc2qugg8tegmo020pp4p5
+       foreign key (cycle_id)
+       references cycle;
 
     alter table event_history
        add constraint FKlef0qi8d85ucr0ed19r8jk8oo
