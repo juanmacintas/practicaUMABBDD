@@ -8,7 +8,7 @@ In this lab we will explore differences and similarities between relational and 
 
 We will need in our laptop:
 
-- [JDK 8 or 11 instalado](https://www.oracle.com/es/java/technologies/javase-jdk11-downloads.html).
+- [JDK 8 or 11 installed](https://www.oracle.com/es/java/technologies/javase-jdk11-downloads.html).
 - Config [JAVA_HOME](https://docs.oracle.com/cd/E19182-01/821-0917/inst_jdk_javahome_t/index.html) varialble properly.
 - [Apache Maven](https://maven.apache.org/download.cgi) 
 - [Opcional] An IDE to simplify our work. Such as [Visual Studio Code](https://code.visualstudio.com/), or [Eclipse](https://www.eclipse.org/downloads/)
