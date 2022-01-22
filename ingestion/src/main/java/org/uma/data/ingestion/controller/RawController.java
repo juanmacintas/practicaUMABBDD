@@ -25,6 +25,11 @@ public class RawController {
         rawService.insert(raw);
     }
 
+    @PostMapping("/rawinsert")
+    public void insertRaw(@RequestBody List<RawDto> raw) {
+        raw.forEach(r -> rawService.insert(r));
+    }
+
     @GetMapping("/getAll")
     public List<RawDto> getAll() {
         return rawService.getAll();
