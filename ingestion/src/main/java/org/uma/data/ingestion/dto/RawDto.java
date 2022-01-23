@@ -1,7 +1,5 @@
 package org.uma.data.ingestion.dto;
 
-import java.sql.Timestamp;
-
 import lombok.Data;
 
 @Data

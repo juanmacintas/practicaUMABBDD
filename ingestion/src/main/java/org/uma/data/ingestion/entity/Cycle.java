@@ -26,5 +26,5 @@ public class Cycle {
 
 	private List<String> history;
 
-	private List<Categorization> cateorization;
+	private List<Categorization> categorization;
 }

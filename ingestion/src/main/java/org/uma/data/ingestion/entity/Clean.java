@@ -1,7 +1,5 @@
 package org.uma.data.ingestion.entity;
 
-import java.sql.Timestamp;
-
 import org.springframework.data.annotation.Id;
 
 import lombok.AllArgsConstructor;
