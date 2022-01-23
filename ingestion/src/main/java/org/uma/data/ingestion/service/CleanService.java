@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.uma.data.ingestion.dto.CleanDto;
-import org.uma.data.ingestion.dto.RawDto;
 import org.uma.data.ingestion.entity.Clean;
 import org.uma.data.ingestion.entity.Raw;
 import org.uma.data.ingestion.repository.CleanRepository;
@@ -46,7 +45,6 @@ public class CleanService {
 
         // prepare return data
         DozerBeanMapper mapper = new DozerBeanMapper();
-        List<Clean> out = new ArrayList<Clean>();
         rawdata.forEach(r -> cleanRepository.save(mapper.map(r, Clean.class)));
 
         return getAll();

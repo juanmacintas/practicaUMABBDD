@@ -2,18 +2,13 @@ package org.uma.data.ingestion.entity;
 
 import java.sql.Date;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import org.springframework.data.annotation.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
 @Builder
 @NoArgsConstructor
@@ -21,18 +16,9 @@ import lombok.NoArgsConstructor;
 public class EventHistory {
 
 	@Id
-	private Integer id;
+	private String id;
 
 	private Integer datasetId;
-
-	@ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private Cycle cycle;
-
-	@ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private Event event;
-
-	@ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private Users user;
 
 	private Date startDate;
 
@@ -41,5 +27,7 @@ public class EventHistory {
 	private Date endDate;
 
 	private String status;
+
+	private Event event;
 
 }

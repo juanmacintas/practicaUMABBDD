@@ -2,16 +2,13 @@ package org.uma.data.ingestion.entity;
 
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import org.springframework.data.annotation.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
 @Builder
 @NoArgsConstructor
@@ -19,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class Cycle {
 
 	@Id
-	private Integer id;
+	private String id;
 
 	private Integer datasetId;
 
@@ -27,9 +24,7 @@ public class Cycle {
 
 	private Boolean lastCycle;
 
-	@OneToMany(mappedBy="cycle")
-	private List<EventHistory> history;
+	private List<String> history;
 
-	@OneToMany(mappedBy="cycle")
 	private List<Categorization> cateorization;
 }

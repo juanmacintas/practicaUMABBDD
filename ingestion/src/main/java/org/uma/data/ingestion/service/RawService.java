@@ -1,7 +1,6 @@
 package org.uma.data.ingestion.service;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import org.dozer.DozerBeanMapper;

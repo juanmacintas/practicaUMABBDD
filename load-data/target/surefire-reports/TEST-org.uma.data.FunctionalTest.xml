@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.uma.data.FunctionalTest" time="11.115" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.uma.data.FunctionalTest" time="4.059" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="13"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/13.0.2+8_2/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/julio.palma.vazquez/github/practicaUMABBDD/load-data/target/surefire/surefirebooter12197251769383172939.jar /Users/julio.palma.vazquez/github/practicaUMABBDD/load-data/target/surefire 2022-01-22T19-16-10_335-jvmRun1 surefire9015800337167678199tmp surefire_04846047473971443437tmp"/>
+    <property name="sun.java.command" value="/Users/julio.palma.vazquez/github/practicaUMABBDD/load-data/target/surefire/surefirebooter4384057650851197201.jar /Users/julio.palma.vazquez/github/practicaUMABBDD/load-data/target/surefire 2022-01-23T10-20-39_308-jvmRun1 surefire3915787591019540307tmp surefire_017321808586558721824tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/julio.palma.vazquez/github/practicaUMABBDD/load-data/target/test-classes:/Users/julio.palma.vazquez/github/practicaUMABBDD/load-data/target/classes:/Users/julio.palma.vazquez/.m2/repository/com/intuit/karate/karate-apache/0.9.5/karate-apache-0.9.5.jar:/Users/julio.palma.vazquez/.m2/repository/com/intuit/karate/karate-core/0.9.5/karate-core-0.9.5.jar:/Users/julio.palma.vazquez/.m2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar:/Users/julio.palma.vazquez/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/Users/julio.palma.vazquez/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/Users/julio.palma.vazquez/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/Users/julio.palma.vazquez/.m2/repository/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar:/Users/julio.palma.vazquez/.m2/repository/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar:/Users/julio.palma.vazquez/.m2/repository/org/yaml/snakeyaml/1.24/snakeyaml-1.24.jar:/Users/julio.palma.vazquez/.m2/repository/de/siegmar/fastcsv/1.0.3/fastcsv-1.0.3.jar:/Users/julio.palma.vazquez/.m2/repository/info/picocli/picocli/4.0.3/picocli-4.0.3.jar:/Users/julio.palma.vazquez/.m2/repository/org/apache/httpcomponents/httpclient/4.5.11/httpclient-4.5.11.jar:/Users/julio.palma.vazquez/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/julio.palma.vazquez/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/julio.palma.vazquez/.m2/repository/org/apache/httpcomponents/httpmime/4.5.11/httpmime-4.5.11.jar:/Users/julio.palma.vazquez/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25.jar:/Users/julio.palma.vazquez/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/Users/julio.palma.vazquez/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/julio.palma.vazquez/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/Users/julio.palma.vazquez/.m2/repository/com/intuit/karate/karate-junit5/0.9.5/karate-junit5-0.9.5.jar:/Users/julio.palma.vazquez/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.0/junit-jupiter-api-5.5.0.jar:/Users/julio.palma.vazquez/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/julio.palma.vazquez/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/julio.palma.vazquez/.m2/repository/org/junit/platform/junit-platform-commons/1.5.0/junit-platform-commons-1.5.0.jar:/Users/julio.palma.vazquez/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.0/junit-jupiter-engine-5.5.0.jar:/Users/julio.palma.vazquez/.m2/repository/org/junit/platform/junit-platform-engine/1.5.0/junit-platform-engine-1.5.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/Users/julio.palma.vazquez/github/practicaUMABBDD/load-data/target/surefire/surefirebooter12197251769383172939.jar"/>
+    <property name="surefire.real.class.path" value="/Users/julio.palma.vazquez/github/practicaUMABBDD/load-data/target/surefire/surefirebooter4384057650851197201.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="13.0.2+8"/>
     <property name="user.name" value="julio.palma.vazquez"/>
@@ -50,6 +50,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="java.class.version" value="57.0"/>
   </properties>
-  <testcase name="loadData[1][1]" classname="org.uma.data.FunctionalTest" time="1.789"/>
-  <testcase name="loadData[1][2]" classname="org.uma.data.FunctionalTest" time="8.811"/>
+  <testcase name="loadData[1][1]" classname="org.uma.data.FunctionalTest" time="1.7"/>
+  <testcase name="loadData[1][2]" classname="org.uma.data.FunctionalTest" time="1.853"/>
 </testsuite>

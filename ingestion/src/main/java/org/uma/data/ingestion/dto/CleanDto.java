@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class CleanDto {
-    Integer id;
+    String id;
     Integer datasetId;
     String client;
     String vendor;
@@ -15,7 +15,7 @@ public class CleanDto {
     String fiscalYear;
     String currency;
     Double spend;
-    Timestamp timestamp;
+    String timestamp;
     String userName;
     String defaultCategory;
 }

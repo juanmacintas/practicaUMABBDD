@@ -5,9 +5,9 @@ Simple ingestion project
 
 ### Starting instructions
 
-1. Create a PostgreSQL instance using docker: 
+1. Create a MongoDB instance using docker: 
 
-> docker run -p 5432:5432 --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+> docker run -p 27017:27017 --name some-mongo -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=test -d mongo
 
 2. Start the service running: 
 

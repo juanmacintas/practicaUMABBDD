@@ -1,8 +1,8 @@
 package org.uma.data.ingestion.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.uma.data.ingestion.entity.Raw;
 
-public interface RawRepository extends JpaRepository<Raw, Integer> {
+public interface RawRepository extends MongoRepository<Raw, Integer> {
 
 }
