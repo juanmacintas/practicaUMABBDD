@@ -21,9 +21,9 @@ Simple ingestion project
     >
     > {"datasetId":1, "client": "acme", "vendor": "air america", "invoiceCode": "AA343234321", "description": "DALAS - MIAMI Flight", "fiscalYear": "2021", "currency": "dollar", "spend": 121.45, "userName": "jsmith", "defaultCategory": "Travel", "timestamp": "20210612"}
 
-    2. /findAll: you can retrieve all data in database as below:
+    2. /getAll: you can retrieve all data in database as below:
     
-    > http://localhost:8080/findAll
+    > http://localhost:8080/getAll
     >
     > [
     >     {
