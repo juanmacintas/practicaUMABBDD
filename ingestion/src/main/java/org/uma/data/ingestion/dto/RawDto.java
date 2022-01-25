@@ -1,9 +1,11 @@
 package org.uma.data.ingestion.dto;
 
+import java.io.Serializable;
+
 import lombok.Data;
 
 @Data
-public class RawDto {
+public class RawDto implements Serializable {
     String id;
     Integer datasetId;
     String client;

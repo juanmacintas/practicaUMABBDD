@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.uma.data.ingestion.dto.RawDto;
 import org.uma.data.ingestion.entity.Raw;
@@ -25,6 +26,7 @@ public class RawService {
         repository.save(entity);
     }
 
+    @Cacheable(cacheNames = "rawCache")
     public List<RawDto> getAll() {
 
         DozerBeanMapper mapper = new DozerBeanMapper();

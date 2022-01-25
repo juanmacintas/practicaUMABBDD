@@ -9,6 +9,10 @@ Simple ingestion project
 
 > docker run -p 27017:27017 --name some-mongo -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=test -d mongo
 
+2. Create a Redis instance using docker:
+
+> docker run --name my-redis -p 6379:6379 -d redis
+
 2. Start the service running: 
 
 > mvn spring-boot:run
